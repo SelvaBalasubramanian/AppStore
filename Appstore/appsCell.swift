@@ -30,7 +30,7 @@ class appsCell: UICollectionViewCell {
             if app?.category != nil{
                 self.categoryLabel.text = app?.category
             }else{
-                self.categoryLabel.text = ""
+                self.categoryLabel.text = "Kids"
             }
             
             if app?.price != nil{
