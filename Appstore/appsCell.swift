@@ -73,6 +73,13 @@ class appsCell: UICollectionViewCell {
         return label
         
     }()
+    let priceTTT : UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textColor = UIColor.darkGray
+        return label
+        
+    }()
     
     func setupViews(){
         
