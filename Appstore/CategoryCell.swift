@@ -73,6 +73,7 @@ class CategoryCell : UICollectionViewCell , UICollectionViewDelegateFlowLayout ,
         addSubview(appsCollectionView)
         addSubview(horizontalLine)
         
+        let y = UIView()
         appsCollectionView.dataSource = self
         appsCollectionView.delegate = self
      
