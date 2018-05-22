@@ -8,16 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		647ACB422013AA6E001DB007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ACB412013AA6E001DB007 /* AppDelegate.swift */; };
-		647ACB442013AA6E001DB007 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ACB432013AA6E001DB007 /* ViewController.swift */; };
 		647ACB472013AA6E001DB007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647ACB452013AA6E001DB007 /* Main.storyboard */; };
 		647ACB4A2013AA6E001DB007 /* Appstore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 647ACB482013AA6E001DB007 /* Appstore.xcdatamodeld */; };
 		647ACB4C2013AA6E001DB007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 647ACB4B2013AA6E001DB007 /* Assets.xcassets */; };
 		647ACB4F2013AA6E001DB007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 647ACB4D2013AA6E001DB007 /* LaunchScreen.storyboard */; };
 		647ACB5A2013AA6E001DB007 /* AppstoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ACB592013AA6E001DB007 /* AppstoreTests.swift */; };
 		647ACB652013AA6E001DB007 /* AppstoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ACB642013AA6E001DB007 /* AppstoreUITests.swift */; };
-		647ACB732013B0E8001DB007 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ACB722013B0E8001DB007 /* CategoryCell.swift */; };
-		647ACB752013CDAF001DB007 /* appsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647ACB742013CDAF001DB007 /* appsCell.swift */; };
-		64F7D7EF202748A4002C6A48 /* AppCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F7D7EE202748A4002C6A48 /* AppCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +36,6 @@
 /* Begin PBXFileReference section */
 		647ACB3E2013AA6E001DB007 /* Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		647ACB412013AA6E001DB007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		647ACB432013AA6E001DB007 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		647ACB462013AA6E001DB007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		647ACB492013AA6E001DB007 /* Appstore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Appstore.xcdatamodel; sourceTree = "<group>"; };
 		647ACB4B2013AA6E001DB007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,9 +47,6 @@
 		647ACB602013AA6E001DB007 /* AppstoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppstoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		647ACB642013AA6E001DB007 /* AppstoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppstoreUITests.swift; sourceTree = "<group>"; };
 		647ACB662013AA6E001DB007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		647ACB722013B0E8001DB007 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
-		647ACB742013CDAF001DB007 /* appsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appsCell.swift; sourceTree = "<group>"; };
-		64F7D7EE202748A4002C6A48 /* AppCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,15 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				647ACB412013AA6E001DB007 /* AppDelegate.swift */,
-				647ACB432013AA6E001DB007 /* ViewController.swift */,
 				647ACB452013AA6E001DB007 /* Main.storyboard */,
 				647ACB4B2013AA6E001DB007 /* Assets.xcassets */,
 				647ACB4D2013AA6E001DB007 /* LaunchScreen.storyboard */,
 				647ACB502013AA6E001DB007 /* Info.plist */,
 				647ACB482013AA6E001DB007 /* Appstore.xcdatamodeld */,
-				647ACB722013B0E8001DB007 /* CategoryCell.swift */,
-				647ACB742013CDAF001DB007 /* appsCell.swift */,
-				64F7D7EE202748A4002C6A48 /* AppCategory.swift */,
 			);
 			path = Appstore;
 			sourceTree = "<group>";
@@ -271,12 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				647ACB732013B0E8001DB007 /* CategoryCell.swift in Sources */,
 				647ACB4A2013AA6E001DB007 /* Appstore.xcdatamodeld in Sources */,
-				647ACB442013AA6E001DB007 /* ViewController.swift in Sources */,
-				647ACB752013CDAF001DB007 /* appsCell.swift in Sources */,
 				647ACB422013AA6E001DB007 /* AppDelegate.swift in Sources */,
-				64F7D7EF202748A4002C6A48 /* AppCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
