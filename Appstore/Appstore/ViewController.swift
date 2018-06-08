@@ -10,15 +10,19 @@ import UIKit
 
 class ViewController: UIViewController  , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
-    
-
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View Did Load")
-        self.view.backgroundColor = .white
         self.title = "Featured Apps"
+        self.view.backgroundColor = .gray
+        
+        DispatchQueue.main.async {
+            let url = URL(string: "https://api.letsbuildthatapp.com/appstore/featured")
+            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                //to be continued.
+            })
+        }
+        
         
         addCategoryCollectionView()
     }
@@ -30,7 +34,7 @@ class ViewController: UIViewController  , UICollectionViewDelegate , UICollectio
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,7 +43,7 @@ class ViewController: UIViewController  , UICollectionViewDelegate , UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return CGSize(width: self.view.frame.width, height: self.view.frame.height/4)
+        return CGSize(width: self.view.frame.width, height: 190)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
@@ -50,14 +54,21 @@ class ViewController: UIViewController  , UICollectionViewDelegate , UICollectio
     
     func addCategoryCollectionView(){
         let layout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height) , collectionViewLayout: layout)
-        collectionView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0)
-        collectionView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0)
-        collectionView.backgroundColor = .white
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         self.view.addSubview(collectionView)
+
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+        
+        collectionView.widthAnchor.constraint(equalTo: self.view.widthAnchor, constant: 0).isActive = true
+        collectionView.heightAnchor.constraint(equalTo: self.view.heightAnchor, constant: 0).isActive = true
+        collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(categoryCell.self, forCellWithReuseIdentifier: "categoryCell")
+        
+        
         
     }
 

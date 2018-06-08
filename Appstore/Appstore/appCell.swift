@@ -20,13 +20,51 @@ class appCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var appnameLabel : UILabel = {
+        let label = UILabel()
+        label.text = "Vector 2"
+        label.font  = UIFont.systemFont(ofSize: 14)
+        label.numberOfLines = 2
+        label.textColor = .black
+        return label
+    }()
+    
+    var categoryLabel : UILabel = {
+        let label = UILabel()
+        label.text = "Adventure"
+        label.font  = UIFont.systemFont(ofSize: 13)
+        label.numberOfLines = 1
+        label.textColor = .gray
+        return label
+    }()
+    
+
+    
+    var priceLabel : UILabel = {
+        let label = UILabel()
+        label.text = "$4.00"
+        label.font  = UIFont.systemFont(ofSize: 12)
+        label.numberOfLines = 1
+        label.textColor = .gray
+        return label
+    }()
+    
     
     func setupCell(){
         image = UIImageView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.width))
         image.contentMode = .scaleAspectFill
         image.layer.cornerRadius = 8
         image.layer.masksToBounds = true
+        self.backgroundColor = .white
+        
         self.addSubview(image)
+        self.addSubview(appnameLabel)
+        self.addSubview(categoryLabel)
+        self.addSubview(priceLabel)
+        appnameLabel.frame = CGRect(x:  0, y: image.frame.height + 2 , width: self.frame.width, height: 25)
+        categoryLabel.frame = CGRect(x:  0, y: image.frame.height + 2 + 25 , width: self.frame.width, height: 15)
+        priceLabel.frame = CGRect(x:  0, y: image.frame.height + 2 + 40 , width: self.frame.width, height: 15)
+        
     }
     
     
