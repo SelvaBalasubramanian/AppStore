@@ -33,6 +33,7 @@ class appCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Adventure"
         label.font  = UIFont.systemFont(ofSize: 13)
+        label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 1
         label.textColor = .gray
         return label
@@ -61,9 +62,9 @@ class appCell: UICollectionViewCell {
         self.addSubview(appnameLabel)
         self.addSubview(categoryLabel)
         self.addSubview(priceLabel)
-        appnameLabel.frame = CGRect(x:  0, y: image.frame.height + 2 , width: self.frame.width, height: 25)
-        categoryLabel.frame = CGRect(x:  0, y: image.frame.height + 2 + 25 , width: self.frame.width, height: 15)
-        priceLabel.frame = CGRect(x:  0, y: image.frame.height + 2 + 40 , width: self.frame.width, height: 15)
+        appnameLabel.frame = CGRect(x:  0, y: image.frame.height + 1, width: self.frame.width, height: 20)
+        categoryLabel.frame = CGRect(x:  0, y: image.frame.height + 2 + 21 , width: self.frame.width, height: 15)
+        priceLabel.frame = CGRect(x:  0, y: image.frame.height + 2 + 36, width: self.frame.width, height: 15)
         
     }
     

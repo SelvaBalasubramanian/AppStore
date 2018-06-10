@@ -10,7 +10,7 @@ import UIKit
 
 class categoryCell: UICollectionViewCell , UICollectionViewDataSource , UICollectionViewDelegate ,UICollectionViewDelegateFlowLayout {
 
-    
+    var apps =  [app]()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,18 +23,26 @@ class categoryCell: UICollectionViewCell , UICollectionViewDataSource , UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return apps.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "appCell", for: indexPath) as! appCell
-            cell.image.image = UIImage.init(named: "Image-"+"\(indexPath.item + 1)")
+            cell.image.image = UIImage.init(named: apps[indexPath.item].imageName)
+        if(apps[indexPath.item].price == ""){
+            cell.priceLabel.text = apps[indexPath.item].price
+        }
+        else{
+            cell.priceLabel.text = "$" + apps[indexPath.item].price
+        }
+            cell.appnameLabel.text = apps[indexPath.item].name
+            cell.categoryLabel.text = apps[indexPath.item].category
         cell.image.backgroundColor = .white
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return CGSize(width: self.frame.height-95, height: self.frame.height-30)
+        return CGSize(width: self.frame.height-93, height: self.frame.height-20)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
@@ -54,19 +62,13 @@ class categoryCell: UICollectionViewCell , UICollectionViewDataSource , UICollec
 //        self.backgroundColor = .green
         
         self.addSubview(categoryLabel)
-        categoryLabel.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 25)
+        categoryLabel.frame = CGRect(x: 10, y: 0, width: self.frame.width, height: 25)
         categoryLabel.backgroundColor = .white
-        
-        
-        
-        
+    
         let layout = UICollectionViewFlowLayout()
         
-        let collectionView = UICollectionView(frame: CGRect(x: 0 , y: 30 , width: self.frame.width, height: self.frame.height - 30), collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: CGRect(x: 0 , y: 30 , width: self.frame.width, height: self.frame.height - 20), collectionViewLayout: layout)
         self.addSubview(collectionView)
-
-    
-
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
