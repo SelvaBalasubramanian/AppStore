@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6424117C20DA7FE600FEAFCB /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6424117B20DA7FE600FEAFCB /* AppDetailViewController.swift */; };
+		6424117E20DA8A8C00FEAFCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6424117D20DA8A8C00FEAFCB /* Assets.xcassets */; };
 		645A7EAA20B45385008B514F /* categoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645A7EA920B45385008B514F /* categoryCell.swift */; };
 		645A7EAC20B457DB008B514F /* appCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645A7EAB20B457DB008B514F /* appCell.swift */; };
 		64D5301D20B405CC0081689C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5301C20B405CC0081689C /* AppDelegate.swift */; };
 		64D5301F20B405CC0081689C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5301E20B405CC0081689C /* ViewController.swift */; };
 		64D5302220B405CC0081689C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D5302020B405CC0081689C /* Main.storyboard */; };
 		64D5302520B405CC0081689C /* Appstore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64D5302320B405CC0081689C /* Appstore.xcdatamodeld */; };
-		64D5302720B405CC0081689C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D5302620B405CC0081689C /* Assets.xcassets */; };
 		64D5302A20B405CC0081689C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D5302820B405CC0081689C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6424117B20DA7FE600FEAFCB /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		6424117D20DA8A8C00FEAFCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		645A7EA920B45385008B514F /* categoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryCell.swift; sourceTree = "<group>"; };
 		645A7EAB20B457DB008B514F /* appCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appCell.swift; sourceTree = "<group>"; };
 		64D5301920B405CC0081689C /* Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,7 +28,6 @@
 		64D5301E20B405CC0081689C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64D5302120B405CC0081689C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64D5302420B405CC0081689C /* Appstore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Appstore.xcdatamodel; sourceTree = "<group>"; };
-		64D5302620B405CC0081689C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64D5302920B405CC0081689C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64D5302B20B405CC0081689C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,13 +64,14 @@
 			children = (
 				64D5301C20B405CC0081689C /* AppDelegate.swift */,
 				64D5301E20B405CC0081689C /* ViewController.swift */,
+				6424117D20DA8A8C00FEAFCB /* Assets.xcassets */,
 				645A7EA920B45385008B514F /* categoryCell.swift */,
 				645A7EAB20B457DB008B514F /* appCell.swift */,
 				64D5302020B405CC0081689C /* Main.storyboard */,
-				64D5302620B405CC0081689C /* Assets.xcassets */,
 				64D5302820B405CC0081689C /* LaunchScreen.storyboard */,
 				64D5302B20B405CC0081689C /* Info.plist */,
 				64D5302320B405CC0081689C /* Appstore.xcdatamodeld */,
+				6424117B20DA7FE600FEAFCB /* AppDetailViewController.swift */,
 			);
 			path = Appstore;
 			sourceTree = "<group>";
@@ -133,7 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D5302A20B405CC0081689C /* LaunchScreen.storyboard in Resources */,
-				64D5302720B405CC0081689C /* Assets.xcassets in Resources */,
+				6424117E20DA8A8C00FEAFCB /* Assets.xcassets in Resources */,
 				64D5302220B405CC0081689C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +151,7 @@
 				64D5302520B405CC0081689C /* Appstore.xcdatamodeld in Sources */,
 				64D5301F20B405CC0081689C /* ViewController.swift in Sources */,
 				645A7EAC20B457DB008B514F /* appCell.swift in Sources */,
+				6424117C20DA7FE600FEAFCB /* AppDetailViewController.swift in Sources */,
 				64D5301D20B405CC0081689C /* AppDelegate.swift in Sources */,
 				645A7EAA20B45385008B514F /* categoryCell.swift in Sources */,
 			);

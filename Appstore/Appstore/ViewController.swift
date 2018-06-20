@@ -65,9 +65,11 @@ class ViewController: UIViewController  , UICollectionViewDelegate , UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"categoryCell", for: indexPath) as! categoryCell
         cell.apps = categoryArray[indexPath.item].apps
         cell.categoryLabel.text = categoryArray[indexPath.item].name
+        cell.vc = self
         return cell
     }
     

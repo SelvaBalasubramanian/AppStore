@@ -11,6 +11,7 @@ import UIKit
 class categoryCell: UICollectionViewCell , UICollectionViewDataSource , UICollectionViewDelegate ,UICollectionViewDelegateFlowLayout {
 
     var apps =  [app]()
+    var vc : UIViewController!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,6 +50,11 @@ class categoryCell: UICollectionViewCell , UICollectionViewDataSource , UICollec
         return UIEdgeInsetsMake(0, 10, 0, 0)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let appdetailViewController  = self.vc.storyboard?.instantiateViewController(withIdentifier: "AppDetailViewController") as? AppDetailViewController
+        appdetailViewController?.app = apps[indexPath.item]
+        self.vc.navigationController?.pushViewController(appdetailViewController!, animated: true)
+    }
     var categoryLabel : UILabel = {
         let label = UILabel()
         label.text = "The Best Selling Category"
