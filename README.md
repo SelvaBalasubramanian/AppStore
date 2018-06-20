@@ -1,5 +1,5 @@
 # AppStore
 Fun work on recreating Appstore of iOS using Swift.
 
-![image](Appstore/AlbumList.gif)
+![image](https://github.com/SelvaBalasubramanian/AppStore/blob/master/Appstore/Appstore.gif)
 
